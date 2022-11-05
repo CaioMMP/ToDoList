@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/estilo.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <title>ToDoList</title>
+</head>
+
+<body>
+    <header>
+        <div class="posicao letra">To Do List</div>
+        <br>
+        <center>
+            <div class="inicio">
+                <input type="text" id="mensagem" class="input" placeholder="----- Digite a tarefa que deve fazer -----">
+                <button class="botao" onclick="adicionar()">Adicionar</button>
+            </div>
+        </center>
+    </header>
+    <center>
+        <div id="lista"></div>
+    </center>
+    <script>
+        function adicionar() {
+            var mensagem = document.getElementById('mensagem').value;
+            var elemento = document.createTextNode(mensagem);
+            var div = document.createElement("div");
+            var botaoEditar = document.createElement("button");
+            var botaoRemover = document.createElement("button");
+            var check = document.createElement("button");
+            check.innerHTML = "Feito";
+            check.addEventListener("click", function() {
+                div.style.textDecoration = "line-through";
+
+            })
+            botaoEditar.innerHTML = "Editar";
+            botaoRemover.innerHTML = "Remover";
+            botaoEditar.addEventListener("click", function() {
+                alert("Não há função para esse botão ainda!!!");
+            })
+            botaoRemover.addEventListener("click", function() {
+                div.remove();
+            })
+            botaoEditar.className = "botaoEditar";
+            botaoRemover.className = "botaoRemover";
+            check.className = "check";
+            div.className = "div";
+            div.appendChild(check);
+            div.appendChild(elemento);
+            div.appendChild(botaoEditar);
+            div.appendChild(botaoRemover);
+            document.getElementById("lista").appendChild(div);
+            document.getElementById("mensagem").value = "";
+        }
+    </script>
+</body>
+
+</html>
