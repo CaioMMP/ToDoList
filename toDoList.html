@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,26 +10,22 @@
 </head>
 
 <body>
+    <script src="./src/js/script.js"></script>
     <header>
         <div class="posicao letra">To Do List</div>
-<<<<<<< HEAD
-        <br> <br>
-=======
+        <br> 
         <br>
->>>>>>> 5d73ddb25d4314fc30a0707aa89a5a41457807ee
         <center>
             <div class="inicio">
-                <input type="text" id="mensagem" class="input" placeholder="----- Digite a tarefa que deve fazer -----">
+                <input type="text" id="mensagem" class="input" placeholder="Digite a tarefa que deve fazer">
                 <button class="botao" onclick="adicionar()">Adicionar</button>
             </div>
         </center>
     </header>
+    <br>
     <center>
-<<<<<<< HEAD
         <div id="lista"> </div>
-=======
         <div id="lista"></div>
->>>>>>> 5d73ddb25d4314fc30a0707aa89a5a41457807ee
     </center>
     <script>
         function adicionar() {
@@ -40,10 +35,14 @@
             var botaoEditar = document.createElement("button");
             var botaoRemover = document.createElement("button");
             var check = document.createElement("button");
+            var checkOut = document.createElement("button");
             check.innerHTML = "Feito";
+            checkOut.innerHTML = "Desfeito";
             check.addEventListener("click", function() {
                 div.style.textDecoration = "line-through";
-
+            })
+            checkOut.addEventListener("click", function() {
+                div.style.textDecoration = "none";
             })
             botaoEditar.innerHTML = "Editar";
             botaoRemover.innerHTML = "Remover";
@@ -56,19 +55,21 @@
             botaoEditar.className = "botaoEditar";
             botaoRemover.className = "botaoRemover";
             check.className = "check";
+            checkOut.className = "check";
             div.className = "div";
             div.appendChild(check);
+            div.appendChild(checkOut);
             div.appendChild(elemento);
             div.appendChild(botaoEditar);
             div.appendChild(botaoRemover);
             document.getElementById("lista").appendChild(div);
             document.getElementById("mensagem").value = "";
         }
+        document.write(
+            "<div class='info'>" +
+            nome + "<br>" + login + "<br>" + email +
+            "</div>"
+        );
     </script>
 </body>
-
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 5d73ddb25d4314fc30a0707aa89a5a41457807ee

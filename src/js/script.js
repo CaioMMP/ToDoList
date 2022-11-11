@@ -1,33 +1,20 @@
-const inputs = document.querySelectorAll('.input');
-const button = document.querySelector('.login__button');
-
-const handleFocus = ({ target }) => {
-  const span = target.previousElementSibling;
-  span.classList.add('span-active');
-}
-
-const handleFocusOut = ({ target }) => {
-  if (target.value === '') {
-    const span = target.previousElementSibling;
-    span.classList.remove('span-active');
-  }
-}
-
-const handleChange = () => {
-  const [name, username, email, password, confirmpass] = inputs;
-
-  if (password.value == confirmpass.value) {
-    if (username.value && password.value.length >= 8 && confirmpass.value.length >= 8) {
-      button.removeAttribute('disabled');
+function cadastra() {
+    var nome = document.getElementById("nome").value;
+    var login = document.getElementById("login").value;
+    var email = document.getElementById("email").value;
+    var senha = document.getElementById("senha").value;
+    var confirmSenha = document.getElementById("confirmSenha").value;
+    if ((nome.search(" ") == -1) &&
+                (login.search(" ") == -1) &&
+                (email.search(" ") == -1) &&
+                (senha.search(" ") == -1) &&
+                (confirmSenha.search(" ") == -1) &&
+                (email.search("@") == -1) &&
+                (email.search(".") != -1)) {
+        alert("!!!Campos Vazios!!!");
+    } else if (senha != confirmSenha) {
+        alert("!!!Senha e Confirmação da Senha devem ser iguais!!!");
     } else {
-      button.setAttribute('disabled', '');
+        window.location.href = "toDoList.html";
     }
-  } else {
-
-  }
-  
 }
-
-inputs.forEach((input) => input.addEventListener('focus', handleFocus));
-inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
-inputs.forEach((input) => input.addEventListener('input', handleChange));
