@@ -5,5 +5,5 @@
 <h1 align='center'>Site To Do List</h1>
 <br>
 <div align='justify'>
-  &emps;Descrição: Website de uma To Do List, que tem o papel de listar as tarefas de seus usuários.
+  Descrição: Website de uma To Do List, que tem o papel de listar as tarefas de seus usuários.
 </div
