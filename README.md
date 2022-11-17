@@ -6,4 +6,9 @@
 <br>
 <div align='justify'>
   Descrição: Website de uma To Do List, que tem o papel de listar as tarefas de seus usuários.
+  <p align='center'>
+  .
+  .
+  .
+  </p>
 </div
