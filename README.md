@@ -4,6 +4,6 @@
 -->
 <h1 align='center'>Site To Do List</h1>
 <br>
-<div margin='20px'>
+<div style='margin: 25px;'>
   Descrição: Website de uma To Do List, que tem o papel de listar as tarefas de seus usuários.
 </div
